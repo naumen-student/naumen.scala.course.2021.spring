@@ -1,0 +1,11 @@
+[debug] Packaging C:\Users\alogi\IdeaProjects\sbt\target\scala-2.13\sbt_2.13-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	HelloWorld
+[debug] 	  C:\Users\alogi\IdeaProjects\sbt\target\scala-2.13\classes\HelloWorld
+[debug] 	HelloWorld\Main$.class
+[debug] 	  C:\Users\alogi\IdeaProjects\sbt\target\scala-2.13\classes\HelloWorld\Main$.class
+[debug] 	HelloWorld\Main$delayedInit$body.class
+[debug] 	  C:\Users\alogi\IdeaProjects\sbt\target\scala-2.13\classes\HelloWorld\Main$delayedInit$body.class
+[debug] 	HelloWorld\Main.class
+[debug] 	  C:\Users\alogi\IdeaProjects\sbt\target\scala-2.13\classes\HelloWorld\Main.class
+[debug] Done packaging.
