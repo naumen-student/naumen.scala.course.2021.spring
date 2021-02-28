@@ -1,0 +1,29 @@
+scala> "Hello Scala! This is Danil"
+res0: String = Hello Scala! This is Danil
+
+scala> def hello(s: String): Unit = {println(s + " Scala! This is Danil Masyutin")}
+hello: (s: String)Unit
+
+scala> hello("Hello")
+Hello Scala! This is Danil Masyutin
+
+scala> hello("Hola")
+Hola Scala! This is Danil Masyutin
+
+scala> hello("Guten tag")
+Guten tag Scala! This is Danil Masyutin
+
+scala> def hello2(h: String, n: String): Unit = {println(h + " Scala! This is " + n.reverse)}
+hello2: (h: String, n: String)Unit
+
+scala> val name:String = "Masyutin Danil"
+name: String = Masyutin Danil
+
+scala> hello2("Hello", name)
+Hello Scala! This is linaD nituysaM
+
+scala> hello2("Hola", name)
+Hola Scala! This is linaD nituysaM
+
+scala> hello2("Guten tag", name)
+Guten tag Scala! This is linaD nituysaM
