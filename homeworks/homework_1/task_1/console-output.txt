@@ -1,0 +1,21 @@
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 15.0.2).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Nikita"
+name: String = Nikita
+
+scala> println("Hello Scala! This is " + name)
+Hello Scala! This is Nikita
+
+scala> val greetings = List("Hola", "Guten tag")
+greetings: List[String] = List(Hola, Guten tag)
+
+scala> greetings.foreach(greeting => println(greeting + " Scala! This is " + name))
+Hola Scala! This is Nikita
+Guten tag Scala! This is Nikita
+
+scala> greetings.foreach(greeting => println(greeting + " Scala! This is " + name.reverse))
+Hola Scala! This is atikiN
+Guten tag Scala! This is atikiN
+
+scala>
