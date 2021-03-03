@@ -1,0 +1,23 @@
+shemloft@LAPTOP-3PL3UB0L:~$ amm
+Loading...
+Welcome to the Ammonite Repl 2.3.8 (Scala 2.13.3 Java 11.0.10)
+@ val name = "Daria Shemyakina"
+name: String = "Daria Shemyakina"
+
+@ val greetings = Array("Hello", "Hola", "Guten Tag")
+greetings: Array[String] = Array("Hello", "Hola", "Guten Tag")
+
+@ def greet(greeting: String, name: String) = println(greeting + " Scala! This is " + name)
+defined function greet
+
+@ for (greeting <- greetings) greet(greeting, name)
+Hello Scala! This is Daria Shemyakina
+Hola Scala! This is Daria Shemyakina
+Guten Tag Scala! This is Daria Shemyakina
+
+
+@ for (greeting <- greetings) greet(greeting, name.reverse)
+Hello Scala! This is anikaymehS airaD
+Hola Scala! This is anikaymehS airaD
+Guten Tag Scala! This is anikaymehS airaD
+
