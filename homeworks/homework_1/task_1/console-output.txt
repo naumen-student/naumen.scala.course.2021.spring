@@ -1,0 +1,27 @@
+PS C:\Users\User\Desktop> scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_144).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Irina Mochalova"
+name: String = Irina Mochalova
+
+scala> println(s"Hello Scala! This is $name.")
+Hello Scala! This is Irina Mochalova.
+
+scala> def sayHello (name: String): Unit = {
+     | val greetingWorlds = List("Hola", "Guten tag", "Ciao")
+     | greetingWorlds.foreach(hello => println(s"$hello Scala! This is $name."))
+     | }
+sayHello: (name: String)Unit
+
+scala> sayHello(name)
+Hola Scala! This is Irina Mochalova.
+Guten tag Scala! This is Irina Mochalova.
+Ciao Scala! This is Irina Mochalova.
+
+scala> sayHello(name.reverse)
+Hola Scala! This is avolahcoM anirI.
+Guten tag Scala! This is avolahcoM anirI.
+Ciao Scala! This is avolahcoM anirI.
+
+scala>
