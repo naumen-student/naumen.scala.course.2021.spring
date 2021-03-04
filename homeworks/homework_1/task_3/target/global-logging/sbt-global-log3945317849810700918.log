@@ -1,0 +1,16 @@
+[debug] > Exec(~run, None, None)
+[info] sbt server started at local:sbt-server-e84d506eeb6237e9ac60
+[info] started sbt server
+[debug] > Exec(__runWatch console0, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(__preWatch console0, None, None)
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\egor\IdeaProjects\homework_1\target\scala-2.13\classes ...
+[info] done compiling
+[success] Total time: 2 s, completed 04.03.2021 16:59:22
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(__postWatch console0, None, None)
+[debug] > Exec(__waitWatch console0, None, None)
