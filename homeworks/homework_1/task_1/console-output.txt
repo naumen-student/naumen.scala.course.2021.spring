@@ -1,0 +1,35 @@
+D:\Program Files\scala\bin>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_281).
+Type in expressions for evaluation. Or try :help.
+
+scala> val a = "Hello Scala! This is Sveta Semenova"
+a: String = Hello Scala! This is Sveta Semenova
+
+scala> println(a)
+Hello Scala! This is Sveta Semenova
+
+scala> val b = a.replace("Hello", "Hola")
+b: String = Hola Scala! This is Sveta Semenova
+
+scala> println(b)
+Hola Scala! This is Sveta Semenova
+
+scala> val c = a.replace("Hello", "Guten tag")
+c: String = Guten tag Scala! This is Sveta Semenova
+
+scala> println(c)
+Guten tag Scala! This is Sveta Semenova
+
+scala> val name = "Sveta Semenova"
+name: String = Sveta Semenova
+
+scala> println(a.replace(name, name.reverse))
+Hello Scala! This is avonemeS atevS
+
+scala> println(b.replace(name, name.reverse))
+Hola Scala! This is avonemeS atevS
+
+scala> println(c.replace(name, name.reverse))
+Guten tag Scala! This is avonemeS atevS
+
+scala>
