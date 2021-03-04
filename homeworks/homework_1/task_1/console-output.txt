@@ -1,0 +1,26 @@
+C:\Users\DanKor>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 15.0.2).
+Type in expressions for evaluation. Or try :help.
+
+scala> var name = "Danil Kormiltsev"
+name: String = Danil Kormiltsev
+
+scala> var messages = Array("Hello", "Hola", "Guten tag")
+messages: Array[String] = Array(Hello, Hola, Guten tag)
+
+scala> def printMessage(name: String, message: String): Unit = {
+     | println(s"$message, Scala! This is $name")
+     | }
+printMessage: (name: String, message: String)Unit
+
+scala> messages.foreach(message => printMessage(name, message))
+Hello, Scala! This is Danil Kormiltsev
+Hola, Scala! This is Danil Kormiltsev
+Guten tag, Scala! This is Danil Kormiltsev
+
+scala> messages.foreach(message => printMessage(name.reverse, message))
+Hello, Scala! This is vestlimroK linaD
+Hola, Scala! This is vestlimroK linaD
+Guten tag, Scala! This is vestlimroK linaD
+
+scala>
