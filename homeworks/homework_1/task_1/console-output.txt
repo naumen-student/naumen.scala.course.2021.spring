@@ -1,0 +1,29 @@
+PS C:\Users\egor> scala
+Welcome to Scala 2.13.5 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_102).
+Type in expressions for evaluation. Or try :help.
+
+scala> val greeting = "Hello Scala! This is"
+val greeting: String = Hello Scala! This is
+
+scala> val name = "Yegor Druzhinin"
+val name: String = Yegor Druzhinin
+
+scala> println(s"$greeting $name")
+Hello Scala! This is Yegor Druzhinin
+
+scala> val gs1 = Array("Hola", "Guten tag", "Ciao").map(x => greeting.replace("Hello", x) + s" $name")
+val gs1: Array[String] = Array(Hola Scala! This is Yegor Druzhinin, Guten tag Scala! This is Yegor Druzhinin, Ciao Scala! This is Yegor Druzhinin)
+
+scala> val gs2 = gs1.map(x => x.replace(name, name.reverse))
+val gs2: Array[String] = Array(Hola Scala! This is ninihzurD rogeY, Guten tag Scala! This is ninihzurD rogeY, Ciao Scala! This is ninihzurD rogeY)
+
+scala> for (x <- gs1 ++ gs2) println(x)
+Hola Scala! This is Yegor Druzhinin
+Guten tag Scala! This is Yegor Druzhinin
+Ciao Scala! This is Yegor Druzhinin
+Hola Scala! This is ninihzurD rogeY
+Guten tag Scala! This is ninihzurD rogeY
+Ciao Scala! This is ninihzurD rogeY
+
+scala>
+:quit
