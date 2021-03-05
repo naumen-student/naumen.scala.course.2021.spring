@@ -1,0 +1,28 @@
+C:\Users\golis>scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 11.0.10).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Liza Golysheva"
+name: String = Liza Golysheva
+
+scala> println(s"Hello Scala! This is ${name}")
+Hello Scala! This is Liza Golysheva
+
+scala> val list = List("Hello", "Hola", "Guten tag")
+list: List[String] = List(Hello, Hola, Guten tag)
+
+scala> val f = (x1:String, x2:String) => println(x1 + " Scala! This is " + x2)
+f: (String, String) => Unit = $$Lambda$1154/0x00000001007d6840@5444f1c3
+
+scala> f(list(1),name)
+Hola Scala! This is Liza Golysheva
+
+scala> list.foreach(i => f(i, name))
+Hello Scala! This is Liza Golysheva
+Hola Scala! This is Liza Golysheva
+Guten tag Scala! This is Liza Golysheva
+
+scala> list.foreach(i => f(i, name.reverse))
+Hello Scala! This is avehsyloG aziL
+Hola Scala! This is avehsyloG aziL
+Guten tag Scala! This is avehsyloG aziL
