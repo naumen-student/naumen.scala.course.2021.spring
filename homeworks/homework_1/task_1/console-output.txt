@@ -1,0 +1,75 @@
+Microsoft Windows [Version 10.0.19042.844]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2020. Все права защищены.
+
+C:\Users\Дмитрий>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) Client VM, Java 1.8.0_251).
+Type in expressions for evaluation. Or try :help.
+
+scala> val a = "Hello Scala! This is Ann Ivanova"
+a: String = Hello Scala! This is Ann Ivanova
+
+scala> println(a)
+Hello Scala! This is Ann Ivanova
+
+scala> val b = "Hola Scala! This is Ann Ivanova"
+b: String = Hola Scala! This is Ann Ivanova
+
+scala> println(b)
+Hola Scala! This is Ann Ivanova
+
+scala> val c = "Guten tag Scala! This is Ann Ivanova"
+c: String = Guten tag Scala! This is Ann Ivanova
+
+scala> println(c)
+Guten tag Scala! This is Ann Ivanova
+
+scala> val a = "Hello Scala! This is avonavI nnA"
+a: String = Hello Scala! This is avonavI nnA
+
+scala> println(d)
+<console>:12: error: not found: value d
+       println(d)
+               ^
+
+scala> println(a)
+Hello Scala! This is avonavI nnA
+
+scala> Завершить выполнение пакетного файла [Y(да)/N(нет)]? N
+
+C:\Users\Дмитрий>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) Client VM, Java 1.8.0_251).
+Type in expressions for evaluation. Or try :help.
+
+scala> var z = new Array[String](3)
+z: Array[String] = Array(null, null, null)
+
+scala> var z = Array("Hello", "Hola", "Guten tag")
+z: Array[String] = Array(Hello, Hola, Guten tag)
+
+scala> var x = new Array[String](2)
+x: Array[String] = Array(null, null)
+
+scala> var x = Array("Ann Ivanova", "avonavI nnA")
+x: Array[String] = Array(Ann Ivanova, avonavI nnA)
+
+scala> for (
+     | i <- z
+     | j <- x
+<console>:3: error: ')' expected but '<-' found.
+       j <- x
+         ^
+
+scala> for (i <- z
+     | j <- x
+<console>:2: error: ')' expected but '<-' found.
+       j <- x
+         ^
+
+scala> for (i <- z;
+     | j <- x) println(i + " Scala! This is " +j)
+Hello Scala! This is Ann Ivanova
+Hello Scala! This is avonavI nnA
+Hola Scala! This is Ann Ivanova
+Hola Scala! This is avonavI nnA
+Guten tag Scala! This is Ann Ivanova
+Guten tag Scala! This is avonavI nnA
