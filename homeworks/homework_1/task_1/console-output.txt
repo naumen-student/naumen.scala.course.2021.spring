@@ -1,1 +1,26 @@
-init
+D:\Intelij IDEA\!Scala\naumen.scala.course.2021.spring>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 13-ea).
+Type in expressions for evaluation. Or try :help.
+
+scala> println("Hello Scala! This is Nikita")
+Hello Scala! This is Nikita
+
+scala> println("Aloha Scala! This is Nikita")
+Aloha Scala! This is Nikita
+
+scala> println("Guten tag Scala! This is Nikita")
+Guten tag Scala! This is Nikita
+
+scala> println("Guten tag Scala! This is" + "Nikita".reverse)
+Guten tag Scala! This isatikiN
+
+scala> println("Guten tag Scala! This is " + "Nikita".reverse)
+Guten tag Scala! This is atikiN
+
+scala> println("Halo Scala! This is " + "Nikita".reverse)
+Halo Scala! This is atikiN
+
+scala> println("Hello Scala! This is " + "Nikita".reverse)
+Hello Scala! This is atikiN
+
+scala>
