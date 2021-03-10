@@ -1,4 +1,3 @@
-import scala.collection.immutable.ListMap
 
 object Exercises {
 
@@ -34,7 +33,7 @@ object Exercises {
   def primeFactor(number: Int): Seq[Int] = {
     var factors = Set[Int]()
     var currentDivisor = 2
-    var currentNumber = number;
+    var currentNumber = number
 
     while (currentDivisor * currentDivisor <= currentNumber) {
       if (currentNumber % currentDivisor == 0) {
@@ -98,7 +97,8 @@ object Exercises {
   )
 
   def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = {
-    ballsArray.toSeq.sortBy(element => (4/3) * Math.PI * Math.pow(element._2._1, 3) * element._2._2).map(element => element._1)
+    ballsArray.toSeq.sortBy(element => (4 / 3) * Math.PI * Math.pow(element._2._1, 3) * element._2._2).map(element => element._1)
   }
+
 
 }
