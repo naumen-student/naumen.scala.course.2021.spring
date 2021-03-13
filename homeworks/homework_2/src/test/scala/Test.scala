@@ -45,5 +45,18 @@ object Test extends TestSuite{
             assert(abs(Exercises.sumCosines(v1, v3, v2, v4) - sumCos2) < 1e-5)
             assert(abs(Exercises.sumCosines(v1, v4, v2, v3) - sumCos3) < 1e-5)
         }
+
+        'test_sortByHeavyweight - {
+            val balls = Map(
+                "A" -> (2, 20.4234),
+                "B" -> (3, 15.1347),
+                "C" -> (5, 3.23423),
+                "D" -> (6, 1.6324)
+            )
+
+            assert(Exercises.sortByHeavyweight(balls) == Seq("A", "D", "C", "B"))
+            assert(Exercises.sortByHeavyweight().head == "Tin")
+            assert(Exercises.sortByHeavyweight().last == "Graphite")
+        }
     }
 }
