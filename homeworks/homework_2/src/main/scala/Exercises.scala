@@ -31,7 +31,20 @@ object Exercises {
     Число 80 раскладывается на множители 1 * 2 * 2 * 2 * 2 * 5, результат выполнения функции => Seq(2, 5).
     Число 98 можно разложить на множители 1 * 2 * 7 * 7, результат выполнения функции => Seq(2, 7).*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
-    def primeFactor(number: Int): Seq[Int] = ???
+    def primeFactor(number: Int): Seq[Int] = {
+        var currentNumber = number
+        for {i <- 2 to number
+             if i <= currentNumber
+             if i % 2 != 0 || i == 2
+             if currentNumber % i == 0
+             }
+            yield {
+                do {
+                    currentNumber /= i
+                } while (currentNumber % i == 0)
+                i
+            }
+    }
 
 
 
