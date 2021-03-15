@@ -1,4 +1,6 @@
 import utest._
+import java.lang.Math.abs
+import java.lang.Math.sqrt
 
 object Test extends TestSuite{
 
@@ -21,6 +23,25 @@ object Test extends TestSuite{
             assert(Exercises.primeFactor(98) == Seq(2, 7))
             assert(Exercises.primeFactor(101) == Seq(101))
             assert(Exercises.primeFactor(3) == Seq(3))
+        }
+
+        'test_vectors - {
+            val v1 = Exercises.Vector2D(5, -4)
+            val v2 = Exercises.Vector2D(2, 1)
+            val v3 = Exercises.Vector2D(0, 3)
+            val v4 = Exercises.Vector2D(7, -1)
+
+            assert(abs(Exercises.sumScalars(v1, v2, v3, v4) - 3.0) < 1e-5)
+            assert(abs(Exercises.sumScalars(v1, v3, v2, v4) - 1.0) < 1e-5)
+            assert(abs(Exercises.sumScalars(v1, v4, v2, v3) - 42.0) < 1e-5)
+
+            val sumCos1 = (6 * sqrt(10) - sqrt(41)) / (5 * sqrt(82))
+            val sumCos2 = (13 * sqrt(41) - 20 * sqrt(10)) / (5 * sqrt(410))
+            val sumCos3 = (39 + sqrt(410)) / (5 * sqrt(82))
+
+            assert(abs(Exercises.sumCosines(v1, v2, v3, v4) - sumCos1) < 1e-5)
+            assert(abs(Exercises.sumCosines(v1, v3, v2, v4) - sumCos2) < 1e-5)
+            assert(abs(Exercises.sumCosines(v1, v4, v2, v3) - sumCos3) < 1e-5)
         }
     }
 }
