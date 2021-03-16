@@ -1,3 +1,5 @@
+import scala.annotation.tailrec
+
 object Exercises {
 
     /*ПРИМЕР*/
@@ -7,9 +9,8 @@ object Exercises {
     def divBy3Or7(iFrom: Int, iTo: Int): Seq[Int] = {
         for {i <- iFrom to iTo
              if i % 3 == 0 || i % 7 == 0
-        } yield i
+             } yield i
     }
-
 
 
     /*ЗАДАНИЕ I*/
@@ -17,12 +18,11 @@ object Exercises {
     на 3 или на 5.*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
     def sumOfDivBy3Or5(iFrom: Int, iTo: Int): Long = {
-            (for {i <- iFrom to iTo
-                  if i % 3 == 0 || i % 5 == 0
-            } yield i
-        ).sum
+        (for {i <- iFrom to iTo
+              if i % 3 == 0 || i % 5 == 0
+              } yield i
+          ).sum
     }
-
 
 
     /*ЗАДАНИЕ II*/
@@ -30,7 +30,23 @@ object Exercises {
     Число 80 раскладывается на множители 1 * 2 * 2 * 2 * 2 * 5, результат выполнения функции => Seq(2, 5).
     Число 98 можно разложить на множители 1 * 2 * 7 * 7, результат выполнения функции => Seq(2, 7).*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
-    def primeFactor(number: Int): Seq[Int] = ???
+    def primeFactor(number: Int): Seq[Int] = {
+        // решето Эратосфена
+        def sieve(s: Stream[Int]): Stream[Int] = {
+            s.head #:: sieve(s.tail.filter(_ % s.head != 0))
+        }
+        @tailrec
+        def rec(num: Int, res: List[Int]): List[Int] = {
+            sieve(Stream.from(2))
+              .takeWhile(_ <= number)
+              .find(num % _ == 0)
+            match {
+                case Some(x) => rec(num / x, x :: res)
+                case None => res.reverse
+            }
+        }
+        rec(number, List());
+    }
 
 
 
