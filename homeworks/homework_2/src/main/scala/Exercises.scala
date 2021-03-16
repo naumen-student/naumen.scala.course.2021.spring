@@ -41,8 +41,8 @@ object Exercises {
               .takeWhile(_ <= number)
               .find(num % _ == 0)
             match {
-                case Some(x) => rec(num / x, x :: res)
-                case None => res.reverse
+                case Some(x) => rec(num / x, res :+ x)
+                case None => res.distinct
             }
         }
         rec(number, List());
