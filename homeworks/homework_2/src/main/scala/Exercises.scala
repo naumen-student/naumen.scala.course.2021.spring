@@ -92,6 +92,6 @@ object Exercises {
             "Chrome" ->   (3,   7.18),   "Cesium" ->    (7,   1.873), "Zirconium" -> (3,   6.45)
         )
 
-    def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = ???
-
+    def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] =
+        balls.toSeq.sortBy(x => 4/3 * java.lang.Math.PI * Math.pow(x._2._1, 3) * x._2._2).map(_._1)
 }
