@@ -1,3 +1,4 @@
+import Exercises.Vector2D
 import utest._
 
 object Test extends TestSuite{
@@ -18,6 +19,19 @@ object Test extends TestSuite{
             assert(Exercises.primeFactor(98)== Seq(2, 7))
             assert(Exercises.primeFactor(1020) == Seq(5, 2, 17, 3))
             assert(Exercises.primeFactor(0) == Seq())
+        }
+        'test_sumScalars - {
+            assert(Exercises.sumScalars(Vector2D(0, 0), Vector2D(1, 1), Vector2D(2, 2), Vector2D(0, 0)) == 0)
+            assert(Exercises.sumScalars(Vector2D(1, 5), Vector2D(3, 3), Vector2D(4, 2), Vector2D(3, 1)) == 32)
+        }
+        'test_sumCosines - {
+            assert(Exercises.sumCosines(Vector2D(0, 1), Vector2D(1, 0), Vector2D(-1, 0), Vector2D(0, -1)) == 0)
+            assert(Exercises.sumCosines(Vector2D(1, 5), Vector2D(3, 3), Vector2D(4,2), Vector2D(3, 1)) == 1.8219997879990104)
+        }
+        'test_sortByHeavyWeight - {
+            assert(Exercises.sortByHeavyweight() == Seq("Tin", "Platinum", "Nickel", "Aluminum", "Titanium", "Lead",
+                "Sodium", "Uranium", "Gold", "Tungsten", "Zirconium", "Chrome", "Iron", "Copper", "Silver", "Plutonium",
+                "Cobalt", "Cesium", "Calcium", "Lithium", "Magnesium", "Potassium", "Graphite"))
         }
     }
 }
