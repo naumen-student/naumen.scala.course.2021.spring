@@ -2,7 +2,7 @@ import utest._
 
 object Test extends TestSuite{
 
-    val tests = Tests{
+    val tests = Tests {
         'test_divBy3Or7 - {
             assert(Exercises.divBy3Or7(1, 3) == Seq(3))
             assert(Exercises.divBy3Or7(5, 9) == Seq(6, 7, 9))
@@ -19,6 +19,22 @@ object Test extends TestSuite{
             assert(Exercises.primeFactor(98) == Seq(2, 7))
             assert(Exercises.primeFactor(97) == Seq(97))
             assert(Exercises.primeFactor(264) == Seq(2, 3, 11))
+        }
+        val v1  = Exercises.Vector2D(1, 2)
+        val v2  = Exercises.Vector2D(2, 3)
+        val v3  = Exercises.Vector2D(3, 5)
+        val v4  = Exercises.Vector2D(4, 1)
+        'test_sumScalars - {
+            assert(Exercises.sumScalars(v1, v2, v3, v4) == 25)
+            assert(Exercises.sumScalars(v1, v3, v2, v4) == 24)
+            assert(Exercises.sumScalars(v4, v1, v3, v2) == 27)
+            assert(Exercises.sumScalars(v3, v1, v3, v2) == 34)
+        }
+        'test_sumCosines - {
+            assert(Exercises.sumCosines(v1, v2, v3, v4) == 1.699384657900215)
+            assert(Exercises.sumCosines(v1, v3, v2, v4) == 1.7369945588975253)
+            assert(Exercises.sumCosines(v4, v1, v3, v2) == 1.649659511180406)
+            assert(Exercises.sumCosines(v3, v1, v3, v2) == 1.995922623226019)
         }
     }
 }
