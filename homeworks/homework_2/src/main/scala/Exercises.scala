@@ -16,7 +16,15 @@ object Exercises {
     /*Реализовать функцию, которая возвращает сумму всех целых чисел в заданном диапазоне (от iForm до iTo), которые делятся
     на 3 или на 5.*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
-    def sumOfDivBy3Or5(iFrom: Int, iTo: Int): Long = ???
+    def sumOfDivBy3Or5(iFrom: Int, iTo: Int): Long = {
+        var sum = 0L
+        for (i <- iFrom to iTo) {
+            if (i % 3 == 0 || i % 5 == 0) {
+                sum += i
+            }
+        }
+        sum
+    }
 
 
 
@@ -25,7 +33,29 @@ object Exercises {
     Число 80 раскладывается на множители 1 * 2 * 2 * 2 * 2 * 5, результат выполнения функции => Seq(2, 5).
     Число 98 можно разложить на множители 1 * 2 * 7 * 7, результат выполнения функции => Seq(2, 7).*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
-    def primeFactor(number: Int): Seq[Int] = ???
+    def primeFactor(number: Int): Seq[Int] = {
+        val isPrimeNumber = (x: Int) => {
+            var current = 2
+            while (current < x && x % current != 0) {
+                current += 1
+            }
+            if (x % current == 0) true else false
+        }
+        var res = collection.mutable.Set[Int]()
+        var current = number
+        var ind = 2
+        while(ind < current) {
+            if (current % ind == 0 && isPrimeNumber(ind)) {
+                current = current / ind
+                if (!res.contains(ind)) {
+                    res.add(ind)
+                    ind = 1
+                }
+            }
+            ind += 1
+        }
+        res.toSeq
+    }
 
 
 
