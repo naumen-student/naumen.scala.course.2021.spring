@@ -1,3 +1,6 @@
+import scala.collection.convert.ImplicitConversions.`collection asJava`
+import scala.collection.immutable.ListMap
+
 object Exercises {
 
     /*ПРИМЕР*/
@@ -10,13 +13,22 @@ object Exercises {
         } yield i
     }
 
-
-
     /*ЗАДАНИЕ I*/
     /*Реализовать функцию, которая возвращает сумму всех целых чисел в заданном диапазоне (от iForm до iTo), которые делятся
     на 3 или на 5.*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
-    def sumOfDivBy3Or5(iFrom: Int, iTo: Int): Long = ???
+
+    def sumOfDivBy3Or5(iFrom: Int, iTo:Int): Long = {
+        def coolSum( i: Int, to: Int, sum: Int): Long = {
+            if (i == to)
+                if (i % 3 == 0 || i % 5 == 0) sum + i
+                else sum
+            else if (i % 3 == 0 || i % 5 == 0) coolSum( i+1, to, sum+i)
+            else coolSum(i+1, to, sum)
+        }
+        coolSum(iFrom, iTo, 0)
+    }
+
 
 
 
@@ -25,8 +37,14 @@ object Exercises {
     Число 80 раскладывается на множители 1 * 2 * 2 * 2 * 2 * 5, результат выполнения функции => Seq(2, 5).
     Число 98 можно разложить на множители 1 * 2 * 7 * 7, результат выполнения функции => Seq(2, 7).*/
     /*Реализовать юнит-тесты в src/test/scala для данной функции.*/
-    def primeFactor(number: Int): Seq[Int] = ???
-
+    def primeFactor(number: Int): Seq[Int] = {
+        def test (number: Int, prime: Int, seq: Seq[Int]): Seq[Int] = {
+            if (number == 1) seq.distinct
+            else if (number%prime > 0) test(number, prime+1, seq)
+            else test(number/prime, prime, seq:+prime)
+        }
+        test(number, 2, Seq.empty[Int])
+    }
 
 
     /*ЗАДАНИЕ III*/
@@ -36,19 +54,21 @@ object Exercises {
     Функция sumScalars должна вычислять сумму скалярных произведений для пар векторов scalar(leftVec0, leftVec1) + scalar(rightVec0, rightVec1).
     Функция sumCosines должна вычислять сумму косинусов углов между парами векторов cosBetween(leftVec0, leftVec1) + cosBetween(rightVec0, rightVec1).*/
     /*Реализовать юнит-тесты в src/test/scala для функций sumScalars и sumCosines*/
-    case class Vector2D(x: Double, y: Double)
+    case class Vector2D(x: Double, y: Double) //класс двумерного вектора
     def abs(vec: Vector2D): Double = java.lang.Math.sqrt(vec.x * vec.x + vec.y * vec.y)
     def scalar(vec0: Vector2D, vec1: Vector2D): Double = vec0.x * vec1.x + vec0.y * vec1.y
     def cosBetween(vec0: Vector2D, vec1: Vector2D): Double = scalar(vec0, vec1) / abs(vec0) / abs(vec1)
-    //def sumByFunc(leftVec0: Vector2D, leftVec1: Vector2D, ???, rightVec0: Vector2D, rightVec1: Vector2D) = ???
-    /*
+    def sumByFunc(leftVec0: Vector2D, leftVec1: Vector2D, func:(Vector2D, Vector2D)=>(Double), rightVec0: Vector2D, rightVec1: Vector2D): Double = {
+        func(leftVec0, leftVec1) + func(rightVec0, rightVec1)
+    }
+
     def sumScalars(leftVec0: Vector2D, leftVec1: Vector2D, rightVec0: Vector2D, rightVec1: Vector2D): Double =
         sumByFunc(leftVec0, leftVec1, scalar, rightVec0, rightVec1)
-    */
-    /*
+
+
     def sumCosines(leftVec0: Vector2D, leftVec1: Vector2D, rightVec0: Vector2D, rightVec1: Vector2D): Double =
         sumByFunc(leftVec0, leftVec1, cosBetween, rightVec0, rightVec1)
-    */
+
 
 
 
@@ -71,6 +91,9 @@ object Exercises {
             "Chrome" ->   (3,   7.18),   "Cesium" ->    (7,   1.873), "Zirconium" -> (3,   6.45)
         )
 
-    def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = ???
+    def sortByHeavyweight(ballsArray: Map[String, (Int, Double)] = balls): Seq[String] = {
+        val sortedMap = ballsArray.toSeq.sortBy(x => x._2._1 * x._2._1 * x._2._1 * x._2._2)
+        sortedMap.map(x => x._1)
+    }
 
 }
