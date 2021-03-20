@@ -50,5 +50,19 @@ object Test extends TestSuite{
             assert(Exercises.max3(seq3).get == 73)
             assert(Exercises.max3(seq4).get == 96)
         }
+
+        'test_sum - {
+            assert(Exercises.sum1(3, 5) == 8)
+            assert(Exercises.sum1(100, -42) == 58)
+            assert(Exercises.sum1(-10, -5) == -15)
+
+            assert(Exercises.sum2(3, 5) == 8)
+            assert(Exercises.sum2(100, -42) == 58)
+            assert(Exercises.sum2(-10, -5) == -15)
+
+            assert(Exercises.sum3(3, 5) == 8)
+            assert(Exercises.sum3(100, -42) == 58)
+            assert(Exercises.sum3(-10, -5) == -15)
+        }
     }
 }
