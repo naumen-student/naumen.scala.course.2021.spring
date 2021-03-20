@@ -35,11 +35,11 @@ object Exercises {
      * Реализуйте функцию тремя разными способами, отличающимися тем как функция себя ведет на пустой коллекции. 
      * Обратите внимание на возвращаемые типы.
      */
-    def max1(xs: Seq[Int]): Int = ???
+    def max1(xs: Seq[Int]): Int = xs.max
 
-    def max2(xs: Seq[Int]): Seq[Int] = ???
+    def max2(xs: Seq[Int]): Seq[Int] = if (xs.nonEmpty) Seq(xs.max) else Seq()
 
-    def max3(xs: Seq[Int]): Option[Int] = ???
+    def max3(xs: Seq[Int]): Option[Int] = if (xs.nonEmpty) Option(xs.max) else None
 
     /**
      * Задание №3
