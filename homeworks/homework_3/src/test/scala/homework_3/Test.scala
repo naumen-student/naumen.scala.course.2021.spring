@@ -45,7 +45,7 @@ object Test extends TestSuite{
         val maxs = Seq(
             (Exercises.max1 _, (x: Int) => x),
             (Exercises.max2 _, (x: Int) => Seq(x)),
-            (Exercises.max3 _, (x: Int) => Option(x)),
+            (Exercises.max3 _, (x: Int) => Some(x)),
         )
 
         'test_max - {
