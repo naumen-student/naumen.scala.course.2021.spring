@@ -13,7 +13,7 @@ Guten Abend Scala! This is Evgeniy
 scala> println("Hello Scala! This is " + "Evgeniy".reverse)
 Hello Scala! This is yinegvE
 
-scala>  println("Aloha Scala! This is" + "Evgeniy".reverse)
+scala>  println("Aloha Scala! This is " + "Evgeniy".reverse)
 Aloha Scala! This isyinegvE
 
 scala> println("Guten Abend Scala! This is " + "Evgeniy".reverse)
