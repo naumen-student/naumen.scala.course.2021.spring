@@ -34,6 +34,57 @@ object Test extends TestSuite {
             assert(table.getCell(1, 0).map(_.toString) == Some("10"))
             assert(table.getCell(1, 1).map(_.toString) == Some("empty"))
         }
+        'test_selfReferenceCell - {
+            val table = new Table(1, 1)
+            val cell = new ReferenceCell(0, 0, table)
+            table.setCell(0, 0, cell)
+
+            assert(cell.toString == "cyclic")
+        }
+
+        'test_referenceCells - {
+            val table = new Table(3, 3)
+
+            val cell00 = new ReferenceCell(2, 0, table)
+            val cell20 = new ReferenceCell(1, 1, table)
+            val cell11 = new StringCell("Bingo!")
+
+            table.setCell(0, 0, cell00)
+            table.setCell(2, 0, cell20)
+            table.setCell(1, 1, cell11)
+
+            assert(cell00.toString.contains("Bingo!"))
+        }
+
+        'test_outOfRangeReferenceCell - {
+            val table = new Table(3, 3)
+
+            val cell00 = new ReferenceCell(2, 0, table)
+            val cell20 = new ReferenceCell(3, 4, table)
+
+            table.setCell(0, 0, cell00)
+            table.setCell(2, 0, cell20)
+
+            assert(cell00.toString.contains("outOfRange"))
+        }
+
+        'test_cyclicReferenceCells - {
+            val table = new Table(3, 3)
+
+            val cell00 = new ReferenceCell(2, 0, table)
+            val cell20 = new ReferenceCell(1, 1, table)
+            val cell11 = new ReferenceCell(0, 0, table)
+
+            table.setCell(0, 0, cell00)
+            table.setCell(2, 0, cell20)
+            table.setCell(1, 1, cell11)
+
+            val cell22 = new ReferenceCell(1, 1, table)
+            table.setCell(2, 2, cell22)
+
+            assert(cell22.toString.contains("cyclic"))
+        }
+
         'test_referenceCell - {
             val table = new Table(3, 3)
             /*ix = 0*/
