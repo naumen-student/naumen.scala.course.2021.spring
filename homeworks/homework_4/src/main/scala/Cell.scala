@@ -1,5 +1,3 @@
-import scala.util.Failure
-
 trait Cell
 
 class EmptyCell extends Cell{ // для пустых ячеек
