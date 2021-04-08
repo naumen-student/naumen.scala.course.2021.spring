@@ -13,7 +13,7 @@ object Exercises {
     def feed[A >: T <: Animal](food: Food[A]): List[String] = animals.map(food.feed)
   }
 
-  trait Food[T <: Animal] {
+  trait Food[-T <: Animal] {
     def feed(animal: T): String = s"${animal.name} eats ${this.toString.toLowerCase()}"
   }
 
