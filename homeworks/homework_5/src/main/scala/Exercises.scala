@@ -9,7 +9,13 @@ object Exercises {
 
 
 
-  case class Shelter ...
+  case class Shelter[+T <: Animal](animals: List[T]) {
+    def +[A >: T <: Animal](animal: A) = Shelter(animals :+ animal)
+
+    def ++[A >: T <: Animal](shelter: Shelter[A]) = Shelter(animals ++ shelter.animals)
+
+    def getNames: List[String] = animals.map(a => a.name)
+  }
 
 
 
