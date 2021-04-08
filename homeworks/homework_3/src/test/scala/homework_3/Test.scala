@@ -4,15 +4,19 @@ import utest._
 
 object Test extends TestSuite{
 
+<<<<<<< HEAD
     val formatter1 : Any => String = Exercises.prettyBooleanFormatter1
     val formatter2 : Any => String = Exercises.prettyBooleanFormatter2
     val formatter3 : Any => String = Exercises.prettyBooleanFormatter3
 
+=======
+>>>>>>> 05024b7cb47dd237cde48b6fdb3613543bd475a2
     val tests = Tests{
         'test_example - {
             val trueStr = "правда"
             assert(Exercises.prettyBooleanFormatter1(true) == trueStr)
         }
+<<<<<<< HEAD
 
         'test_prettyBooleanFormatter1 - {
             assert(formatter1(true) == "правда")
@@ -63,5 +67,7 @@ object Test extends TestSuite{
             assert(Exercises.sum3(0, 0) == 0)
             assert(Exercises.sum3(-1, -2) == -3)
         }
+=======
+>>>>>>> 05024b7cb47dd237cde48b6fdb3613543bd475a2
     }
 }
