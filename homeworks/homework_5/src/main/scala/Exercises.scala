@@ -15,19 +15,10 @@ object Exercises {
   case class Shelter[+T <: Animal](list : List[T])
   {
     def +[U >: T <: Animal](animal: U): Shelter[U] = {
-    //def +[U <: Animal](animal: U): Shelter[U] = {
-      //if (animal.isInstanceOf[T])
       Shelter(animal :: list)
-      //else
-        //Shelter(animal.asInstanceOf[Animal] :: list.asInstanceOf[List[Animal]])
     }
 
     def ++[U >: T <: Animal](shelter: Shelter[U]): Shelter[U] = {
-    //def ++[U <: Animal](shelter: Shelter[U]): Shelter[U] = {
-      /*if (shelter.isInstanceOf[Shelter[T]])
-        Shelter(list ::: shelter.list)
-      else
-        Shelter(shelter.list.asInstanceOf[List[Animal]] ::: list.asInstanceOf[List[Animal]])*/
       Shelter(list ::: shelter.list)
     }
 
