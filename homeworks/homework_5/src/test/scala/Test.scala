@@ -29,7 +29,6 @@ object Test extends TestSuite {
 
     val r1 = s1.feed(Meat)
 
-    println(r1.toSet)
     assert(r1.toSet == Set("Garfield eats meat"))
 
     val r2 = s1.feed(Milk)
