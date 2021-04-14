@@ -1,4 +1,5 @@
-object Exercises {
+object Exercises  {
+
   trait Animal {
     def name: String
   }
@@ -7,17 +8,31 @@ object Exercises {
 
   case class Dog(override val name: String) extends Animal
 
+  case class Shelter [+T <: Animal](pets: List[Animal]){
 
+    def + [A<:Animal](value2: A):Shelter[A] = {
+      Shelter (pets:::List(value2))
+    }
 
-  case class Shelter ...
+    def ++ [A<:Animal] (value2: Shelter[A]):Shelter[A] = {
+      Shelter (pets:::value2.pets)
+    }
 
+    def getNames () = {
+      pets.map(pet=>pet.name)
+    }
 
+    def feed[B >: T <: Animal](food: Food[B]) = {
+      pets.map(x => s"${x.name} eats ${food.toString.toLowerCase()}")
+    }
+  }
 
-  trait Food ...
+  trait Food [eater<:Animal]
 
-  case object Meat extends Food[Animal] ...
+  case object Meat extends Food[Animal]
 
-  case object Milk extends Food[Cat] ...
+  case object Milk extends Food[Cat]
 
-  case object Bread extends Food[Dog] ...
+  case object Bread extends Food[Dog]
+
 }

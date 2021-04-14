@@ -26,7 +26,7 @@ object Test extends TestSuite {
     assert(s6.getNames.toSet == Set("Goofy", "Barbos"))
 
     //Test task 2
-
+//
     val r1 = s1.feed(Meat)
 
     assert(r1.toSet == Set("Garfield eats meat"))
