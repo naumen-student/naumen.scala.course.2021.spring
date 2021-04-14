@@ -21,13 +21,20 @@ object Exercises {
 
 
   trait Food[-T <: Animal] {
-    def feed(animal: T): String = s"${animal.name} eats ${this.getClass.getSimpleName.toLowerCase}"
+    def feed(animal: T): String = s"${animal.name} eats ${name}"
+    def name: String
   }
 
-  case object Meat extends Food[Animal]() {}
+  case object Meat extends Food[Animal]() {
+    override def name: String = "meat"
+  }
 
-  case object Milk extends Food[Cat]() {}
+  case object Milk extends Food[Cat]() {
+    override def name: String = "milk"
+  }
 
-  case object Bread extends Food[Dog]() {}
+  case object Bread extends Food[Dog]() {
+    override def name: String = "bread"
+  }
 
 }
