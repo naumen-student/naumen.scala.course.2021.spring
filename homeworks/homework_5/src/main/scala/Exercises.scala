@@ -11,23 +11,21 @@ object Exercises  {
   case class Shelter [+T <: Animal](pets: List[Animal]){
 
     def + [A<:Animal](value2: A):Shelter[A] = {
-      Shelter (pets:::List(value2))
+      Shelter (value2 +: pets)
     }
 
     def ++ [A<:Animal] (value2: Shelter[A]):Shelter[A] = {
       Shelter (pets:::value2.pets)
     }
 
-    def getNames () = {
-      pets.map(pet=>pet.name)
-    }
+    def getNames: List[String] = pets.map(_.name)
 
-    def feed[B >: T <: Animal](food: Food[B]) = {
+    def feed[B >: T <: Animal](food: Food[B]): List[String] = {
       pets.map(x => s"${x.name} eats ${food.toString.toLowerCase()}")
     }
   }
 
-  trait Food [eater<:Animal]
+  trait Food [-eater<:Animal]
 
   case object Meat extends Food[Animal]
 
