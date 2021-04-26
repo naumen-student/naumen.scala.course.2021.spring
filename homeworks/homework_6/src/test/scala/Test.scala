@@ -21,7 +21,8 @@ object Test extends TestSuite{
 
     'morse - {
       assert(Exercises.morse("SOS") == "... --- ...")
-      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -..!")
+      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -.. !")
+      //тут добавил пробел перед восклицательным знаком думаю опечатка была
     }
 
     'wordReverse - {
