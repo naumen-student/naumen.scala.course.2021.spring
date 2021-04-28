@@ -10,7 +10,7 @@ trait Monad[F[_]] {
     }
 
     def sequence[A](fas: List[F[A]]): F[List[A]] = {
-        fas.foldLeft(pure(List[A]()))((lst, el) => flatMap(lst)(l => flatMap(el)(e => pure(l :+ e))))
+        fas.foldLeft(pure(List[A]()))((lst, el) => map2(lst, el)((l, e) => l :+ e))
     }
 
     def compose[A, B, C](f: A => F[B])(g: B => F[C]): A => F[C] = {
