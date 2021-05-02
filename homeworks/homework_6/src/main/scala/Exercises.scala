@@ -1,3 +1,5 @@
+import scala.annotation.tailrec
+
 object Exercises {
 
 
@@ -12,9 +14,23 @@ object Exercises {
    * @param idx
    * @return
    */
-  def fibonacci4Index(idx: Int): Int = ???
+  def fibonacci4Index(idx: Int): Int = fibonacci4IndexRecursion(idx)
 
-  def fibonacci(idx: Int): Seq[Int] = ???
+  @tailrec
+  private def fibonacci4IndexRecursion(i: Int, f1: Int = 0, f2: Int = 1): Int = i match {
+    case 0 => f1
+    case 1 => f2
+    case _ => fibonacci4IndexRecursion(i - 1, f2, f1 + f2)
+  }
+
+  def fibonacci(idx: Int): Seq[Int] = fibonacciRecursion(idx)
+
+  @tailrec
+  private def fibonacciRecursion(i: Int, f1: Int = 0, f2: Int = 1, fib: Vector[Int] = Vector(0)): Seq[Int] = i match {
+    case 0 => fib
+    case 1 => fib :+ f2
+    case _ => fibonacciRecursion(i - 1, f2, f1 + f2, fib :+ f2)
+  }
 
   lazy val MORSE = Map("A" -> ".-", "B" -> "-...", "C" -> "-.-.", "D" -> "-..", "E" -> ".", "F" -> "..-.",
                        "G" -> "--.", "H" -> "....", "I" -> "..", "J" -> ".---", "K" -> "-.-", "L" -> ".-..",
