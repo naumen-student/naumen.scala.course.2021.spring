@@ -38,7 +38,8 @@ object Exercises {
                        "S" -> "...", "T" -> "-", "U" -> "..-", "V" -> "...-", "W" -> ".--", "X" -> "-..-",
                        "Y" -> "-.--", "Z" -> "--..")
 
-  def morse(text: String): String = ???
+  def morse(text: String): String =
+    text.map(char => MORSE.getOrElse(char.toUpper.toString, char)).mkString(" ")
 
 
   def wordReverse(text: String): String = ???
