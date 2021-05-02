@@ -42,6 +42,19 @@ object Exercises {
     text.map(char => MORSE.getOrElse(char.toUpper.toString, char)).mkString(" ")
 
 
-  def wordReverse(text: String): String = ???
+  def wordReverse(text: String): String = wordReverseRecursion(text)
+
+  @tailrec
+  private def wordReverseRecursion(text: String, result: String = ""): String = {
+    if (text.isEmpty) return result
+    val (word, startsWithNotLetters) = text.span(_.isLetter)
+    val (separators, rest) = startsWithNotLetters.span(!_.isLetter)
+    wordReverseRecursion(rest, s"$result${reverseWord(word)}$separators")
+  }
+
+  private def reverseWord(word: String): String = {
+    if (word.isEmpty) return word
+    if (word.head.isUpper) word.toLowerCase.reverse.capitalize else word.reverse
+  }
 
 }
