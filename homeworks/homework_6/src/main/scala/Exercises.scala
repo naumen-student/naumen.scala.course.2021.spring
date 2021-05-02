@@ -1,7 +1,10 @@
 object Exercises {
 
 
-  def reverse[T](seq: Seq[T]): Seq[T] = ???
+  def reverse[T](seq: Seq[T]): Seq[T] = if (seq.nonEmpty)
+    seq.tail.foldLeft(Seq(seq.head))((current, value) => value +: current)
+  else
+    seq
 
   /**
    * https://ru.wikipedia.org/wiki/Числа_Фибоначчи
