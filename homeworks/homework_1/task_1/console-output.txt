@@ -1,0 +1,19 @@
+i.s.perepelkin@macbook-isperepelkin ~ % scala
+Welcome to Scala 2.13.5 (OpenJDK 64-Bit Server VM, Java 15.0.1).
+Type in expressions for evaluation. Or try :help.
+
+scala> val greetings = List("Hello", "Hola", "Guten tag")
+val greetings: List[String] = List(Hello, Hola, Guten tag)
+
+scala> val student = "Ivan Perepelkin"
+val student: String = Ivan Perepelkin
+
+scala> { for (x <- greetings; y <- student :: student.reverse :: Nil) yield (x,y) }.foreach { case (greeting, student) => println(s"$greeting Scala! This is $student") }
+Hello Scala! This is Ivan Perepelkin
+Hello Scala! This is niklepereP navI
+Hola Scala! This is Ivan Perepelkin
+Hola Scala! This is niklepereP navI
+Guten tag Scala! This is Ivan Perepelkin
+Guten tag Scala! This is niklepereP navI
+
+scala> 
