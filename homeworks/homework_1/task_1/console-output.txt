@@ -1,0 +1,23 @@
+[radish@radish-pc naumen.scala.course (homework_1 ✗)]$ amm
+Loading...
+Welcome to the Ammonite Repl 2.3.8 (Scala 2.13.3 Java 11.0.7)
+@ val name = "Anastasia Antipenkova"
+name: String = "Anastasia Antipenkova"
+
+@ println(s"Hello Scala! This is $name")
+Hello Scala! This is Anastasia Antipenkova
+
+
+@ val greetings = Array("Hello", "Hola", "Guten tag")
+greetings: Array[String] = Array("Hello", "Hola", "Guten tag")
+
+@ for (greeting <- greetings) println(s"$greeting Scala! This is $name")
+Hello Scala! This is Anastasia Antipenkova
+Hola Scala! This is Anastasia Antipenkova
+Guten tag Scala! This is Anastasia Antipenkova
+
+
+@ for (greeting <- greetings) println(s"$greeting Scala! This is ${name.reverse}")
+Hello Scala! This is avoknepitnA aisatsanA
+Hola Scala! This is avoknepitnA aisatsanA
+Guten tag Scala! This is avoknepitnA aisatsanA
