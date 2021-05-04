@@ -1,0 +1,25 @@
+C:\Users\PesGospoda>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 15.0.1).
+Type in expressions for evaluation. Or try :help.
+
+scala> val a = "Helloo Scala!! This is me, Alexey, Alexey Chermnykh"
+a: String = Helloo Scala!! This is me, Alexey, Alexey Chermnykh
+
+scala> println(a)
+Helloo Scala!! This is me, Alexey, Alexey Chermnykh
+
+scala> println(a + "!!!!")
+Helloo Scala!! This is me, Alexey, Alexey Chermnykh!!!!
+
+scala> val Hola = "Not hola"
+Hola: String = Not hola
+
+scala> val Alexey = ", you are not Alexey! "
+Alexey: String = ", you are not Alexey! "
+
+scala> println(Hola, Alexey, Hola)
+(Not hola,, you are not Alexey! ,Not hola)
+
+scala> println(Hola + Alexey + Hola)
+Not hola, you are not Alexey! Not hola
+
