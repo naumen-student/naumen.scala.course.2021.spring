@@ -1,0 +1,19 @@
+C:\Users\ritas>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 11.0.10).
+Type in expressions for evaluation. Or try :help.
+
+scala> val meetings = List("Hello", "Hola", "Guten tag")
+meetings: List[String] = List(Hello, Hola, Guten tag)
+
+scala> val name = "Margarita Levinskikh"
+name: String = Margarita Levinskikh
+
+scala> for (meeting <- meetings) println(meeting + " Scala! This is " + name)
+Hello Scala! This is Margarita Levinskikh
+Hola Scala! This is Margarita Levinskikh
+Guten tag Scala! This is Margarita Levinskikh
+
+scala> for (meeting <- meetings) println(meeting + " Scala! This is " + name.reverse)
+Hello Scala! This is hkiksniveL atiragraM
+Hola Scala! This is hkiksniveL atiragraM
+Guten tag Scala! This is hkiksniveL atiragraM
