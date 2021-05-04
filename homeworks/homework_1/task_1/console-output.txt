@@ -1,0 +1,28 @@
+ird-pc@ird-pc-laptop:~$ scala
+Welcome to Scala 2.11.12 (OpenJDK 64-Bit Server VM, Java 14.0.2).
+Type in expressions for evaluation. Or try :help.
+
+scala> var name = "Ivashkin Roman"
+name: String = Ivashkin Roman
+
+scala> def hello(hi: String, name: String): Unit = println(s"$hi Scala! This is $name")
+hello: (hi: String, name: String)Unit
+
+scala> hello("Hello", name)
+Hello Scala! This is Ivashkin Roman
+
+scala> List("Hello", "Hi", "Hola", "Aloha", "Good morning").foreach(hi => hello(hi, name))
+Hello Scala! This is Ivashkin Roman
+Hi Scala! This is Ivashkin Roman
+Hola Scala! This is Ivashkin Roman
+Aloha Scala! This is Ivashkin Roman
+Good morning Scala! This is Ivashkin Roman
+
+scala> List("Hello", "Hi", "Hola", "Aloha", "Good morning").foreach(hi => hello(hi, name.reverse))
+Hello Scala! This is namoR nikhsavI
+Hi Scala! This is namoR nikhsavI
+Hola Scala! This is namoR nikhsavI
+Aloha Scala! This is namoR nikhsavI
+Good morning Scala! This is namoR nikhsavI
+
+scala>
