@@ -1,0 +1,29 @@
+scala> val name = "Evgenii Alekseev"
+val name: String = Evgenii Alekseev
+
+scala> val hello: String = "Hello Scala! This is"
+val hello: String = Hello Scala! This is
+
+scala> println(s"$hello $name")
+Hello Scala! This is Evgenii Alekseev
+
+scala> var gutenTag = hello.replace("Hello", "Guten tag")
+var gutenTag: String = Guten tag Scala! This is
+
+scala> var halo = "Halo"+hello.slice(5, hello.length)
+var halo: String = Halo Scala! This is
+
+scala> println(s"$gutenTag $name")
+Guten tag Scala! This is Evgenii Alekseev
+
+scala> println(s"$halo $name")
+Halo Scala! This is Evgenii Alekseev
+
+scala> println(s"$hello ${name.reverse}")
+Hello Scala! This is veeskelA iinegvE
+
+scala> println(s"$gutenTag ${name.reverse}")
+Guten tag Scala! This is veeskelA iinegvE
+
+scala> println(s"$halo ${name.reverse}")
+Halo Scala! This is veeskelA iinegvE
