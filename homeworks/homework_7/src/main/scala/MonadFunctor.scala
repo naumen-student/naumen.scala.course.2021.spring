@@ -11,7 +11,8 @@ trait Monad[F[_]] {
     def sequence[A](fas: List[F[A]]): F[List[A]] =
         fas.foldRight(pure(List[A]()))((list, fa) => map2(list, fa)(_ +: _))
 
-    def compose[A, B, C](f: A => F[B])(g: B => F[C]): A => F[C] = ???
+    def compose[A, B, C](f: A => F[B])(g: B => F[C]): A => F[C] =
+        a => flatMap(f(a))(b => g(b))
 }
 
 trait Functor[F[_]] {
