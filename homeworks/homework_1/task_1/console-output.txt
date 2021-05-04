@@ -1,0 +1,26 @@
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_271).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Vitaly Vertikov"
+name: String = Vitaly Vertikov
+
+scala> def print(hello : String, name : String) : String = hello + " Scala! This is " + name
+print: (hello: String, name: String)String
+
+scala> println(print("Hello", name))
+Hello Scala! This is Vitaly Vertikov
+
+scala> println(print("Hola", name))
+Hola Scala! This is Vitaly Vertikov
+
+scala> println(print("Guten tag", name))
+Guten tag Scala! This is Vitaly Vertikov
+
+scala> println(print("Hello", name.reverse))
+Hello Scala! This is vokitreV ylatiV
+
+scala> println(print("Hola", name.reverse))
+Hola Scala! This is vokitreV ylatiV
+
+scala> println(print("Guten tag", name.reverse))
+Guten tag Scala! This is vokitreV ylatiV
