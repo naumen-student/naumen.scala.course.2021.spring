@@ -1,0 +1,82 @@
+C:\Users\danil\.jdks\adopt-openjdk-15.0.2\bin\java.exe -Djline.terminal=NONE -javaagent:E:\programs\jb_tools\apps\IDEA-U\ch-0\203.7148.57\lib\idea_rt.jar=50599:E:\programs\jb_tools\apps\IDEA-U\ch-0\203.7148.57\bin -Dfile.encoding=UTF-8 -classpath C:\Users\danil\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.13.5.jar;C:\Users\danil\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.13.5.jar;C:\Users\danil\.ivy2\cache\org.scala-lang\scala-library\srcs\scala-library-2.13.5-sources.jar;C:\Users\danil\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.13.5.jar;C:\Users\danil\AppData\Roaming\JetBrains\IntelliJIdea2020.3\plugins\Scala\lib\runners.jar scala.tools.nsc.MainGenericRunner -usejavacp -Xjline:off
+Welcome to Scala 2.13.5 (OpenJDK 64-Bit Server VM, Java 15.0.2).
+Type in expressions for evaluation. Or try :help.
+
+scala> def hello(name: String, greeting: String = "Hello"): Unit = {
+   println(s"$greeting Scala! This is $name")
+ }
+     |      | def hello(name: String, greeting: String): Unit
+
+scala> hello("Danil")
+Hello Scala! This is Danil
+
+scala> hello("Danil", greeting = "Hola")
+Hola Scala! This is Danil
+
+scala> hello("Danil", greeting = "Guten tag")
+Guten tag Scala! This is Danil
+
+scala> "dek".reverse
+val res6: String = ked
+
+scala> val greetings = ("Hello", "Hola", "Guten tag")
+val greetings: (String, String, String) = (Hello,Hola,Guten tag)
+
+scala> val names = ("Danil", "Kek")
+val names: (String, String) = (Danil,Kek)
+
+scala> greetings
+val res7: (String, String, String) = (Hello,Hola,Guten tag)
+
+scala> greetings.flatMap(u => u.names.map(v => (u, v)))
+                 ^
+       error: value flatMap is not a member of (String, String, String)
+
+scala> names.map(e => 1)
+             ^
+       error: value map is not a member of (String, String)
+       did you mean swap?
+
+scala> Array(1, 2).map(e => e + 2)
+val res10: Array[Int] = Array(3, 4)
+
+scala> val greetings = Array("Hello", "Hola", "Guten tag")
+val greetings: Array[String] = Array(Hello, Hola, Guten tag)
+
+scala> val names = Array("Danil", "Kek")
+val names: Array[String] = Array(Danil, Kek)
+
+scala> greetings.flatMap(u => u.names.map(v => (u, v)))
+                                ^
+       error: value names is not a member of String
+
+scala> greetings.flatMap(u => names.map(v => (u, v)))
+val res12: Array[(String, String)] = Array((Hello,Danil), (Hello,Kek), (Hola,Danil), (Hola,Kek), (Guten tag,Danil), (Guten tag,Kek))
+
+scala> greetings.flatMap(u => names.map(v => (u, v))).foreach((greeting, name) => hello(name.reverse, greeting = greeting))
+                                                               ^
+       error: missing parameter type
+       Note: The expected type requires a one-argument function accepting a 2-Tuple.
+             Consider a pattern matching anonymous function, `{ case (greeting, name) =>  ... }`
+                                                                         ^
+       error: missing parameter type
+
+scala> greetings.flatMap(u => names.map(v => (u, v))).foreach((greeting: String, name: String) => hello(name.reverse, greeting = greeting))
+                                                                                               ^
+       error: type mismatch;
+        found   : (String, String) => Unit
+        required: ((String, String)) => ?
+
+scala> greetings.flatMap(u => names.map(v => (u, v))).foreach(case (greeting: String, name: String) => hello(name.reverse, greeting = greeting))
+                                                              ^
+       error: illegal start of simple expression
+
+scala> greetings.flatMap(u => names.map(v => (u, v))).foreach{case (greeting: String, name: String) => hello(name.reverse, greeting = greeting)}
+Hello Scala! This is linaD
+Hello Scala! This is keK
+Hola Scala! This is linaD
+Hola Scala! This is keK
+Guten tag Scala! This is linaD
+Guten tag Scala! This is keK
+
+scala>
