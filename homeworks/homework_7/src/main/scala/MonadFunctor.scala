@@ -21,6 +21,8 @@ trait Functor[F[_]] {
 
 object Functor {
     def functorFromMonad[F[_]](M: Monad[F]): Functor[F] = new Functor[F] {
-        def map[A, B](a: F[A])(f: A => B): F[B] = ???
+        def map[A, B](fa: F[A])(f: A => B): F[B] =
+            M.flatMap(fa)(a => M.pure(f(a)))
+
     }
 }
