@@ -1,3 +1,5 @@
+import scala.util.matching.Regex
+
 object Exercises {
 
 
@@ -9,12 +11,7 @@ object Exercises {
    * @param idx
    * @return
    */
-  def fibonacci4Index(idx: Int): Int = idx match {
-    case x if x < 0 => -1 // на случай, если кто-то подаст отрицательное число
-    case 0 => 0
-    case 1 => 1
-    case x => fibonacci4Index(x - 1) + fibonacci4Index(x - 2)
-  }
+  def fibonacci4Index(idx: Int): Int = fibonacci(idx).last
 
   def fibonacci(idx: Int): Seq[Int] = idx match {
     case x if x < 0 => Seq(-1) // на случай, если кто-то подаст отрицательное число
@@ -29,9 +26,15 @@ object Exercises {
                        "S" -> "...", "T" -> "-", "U" -> "..-", "V" -> "...-", "W" -> ".--", "X" -> "-..-",
                        "Y" -> "-.--", "Z" -> "--..")
 
-  def morse(text: String): String = ???
+  def morse(text: String): String = text.map(char => MORSE.getOrElse(char.toString.toUpperCase(), char)).mkString(" ")
 
 
-  def wordReverse(text: String): String = ???
+
+  val wordRegExp: Regex = "([а-яА-Яa-zA-Z]+|[^а-яА-Яa-zA-Z])".r
+
+  def wordReverse(text: String): String = wordRegExp.findAllIn(text).map {
+    case word if word.head.isUpper => (word.head.toLower + word.tail).reverse.capitalize
+    case word => word.reverse
+  }.mkString("")
 
 }

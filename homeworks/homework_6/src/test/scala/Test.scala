@@ -28,11 +28,16 @@ object Test extends TestSuite{
     }
 
     'morse - {
+      assert(Exercises.morse("") == "")
       assert(Exercises.morse("SOS") == "... --- ...")
-      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -..!")
+      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -.. !") // ошибка в тесте была изнчально
     }
 
     'wordReverse - {
+      assert(Exercises.wordReverse("") == "")
+      assert(Exercises.wordReverse("!&?") == "!&?")
+      assert(Exercises.wordReverse("Hello world!") == "Olleh dlrow!")
+      assert(Exercises.wordReverse("USSR") == "RSSu") // какое поведение должно быть тут???
       assert(Exercises.wordReverse("Зима!.. Крестьянин, торжествуя...") == "Амиз!.. Ниняьтсерк, яувтсежрот...")
     }
 
