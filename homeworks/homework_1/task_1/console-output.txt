@@ -1,0 +1,34 @@
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_181).
+Type in expressions for evaluation. Or try :help.
+                      
+scala> val s = " Scala! This is ";val hiword = "Hi";val name = "Konstantin"
+s: String = " Scala! This is "
+hiword: String = Hi
+name: String = Konstantin
+
+scala> println(hiword + s + name)
+Hi Scala! This is Konstantin
+
+scala> val hiword = "Hola"
+hiword: String = Hola
+
+scala> println(hiword + s + name)
+Hola Scala! This is Konstantin
+
+scala> val hiword = "Guten tag"
+hiword: String = Guten tag
+
+scala> println(hiword + s + name)
+Guten tag Scala! This is Konstantin
+
+scala> val name = "nitnatsnoK"
+name: String = nitnatsnoK
+
+scala> println(hiword + s + name)
+Guten tag Scala! This is nitnatsnoK
+
+scala> val hiword = "Hola"
+hiword: String = Hola
+
+scala> println(hiword + s + name)
+Hola Scala! This is nitnatsnoK
