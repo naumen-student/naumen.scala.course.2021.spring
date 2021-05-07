@@ -14,7 +14,7 @@ object Exercises {
 
   def fibonacci(idx: Int): Seq[Int] = idx match {
     case 0 => Seq(0)
-    case 1 => Seq(1)
+    case 1 => Seq(0, 1)
     case _ => (2 to idx).foldLeft(List(0, 1))((list, _) => list :+ (list.last + list.init.last))
   }
 
