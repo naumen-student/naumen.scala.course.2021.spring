@@ -21,11 +21,13 @@ object Test extends TestSuite{
 
     'morse - {
       assert(Exercises.morse("SOS") == "... --- ...")
-      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -..!")
+      assert(Exercises.morse("Hello world!") == ".... . .-.. .-.. ---   .-- --- .-. .-.. -.. !")//поменял тест, был без пробела перед !
     }
 
     'wordReverse - {
       assert(Exercises.wordReverse("Зима!.. Крестьянин, торжествуя...") == "Амиз!.. Ниняьтсерк, яувтсежрот...")
+      assert(Exercises.wordReverse("@Зима!.. Крестьянин торжествуя...") == "@Амиз!.. Ниняьтсерк яувтсежрот...")
+      assert(Exercises.wordReverse("Зима!.. @Крестьянин торжествуя...") == "Амиз!.. @Ниняьтсерк яувтсежрот...")
     }
 
 
