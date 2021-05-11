@@ -1,0 +1,29 @@
+Welcome to Scala 2.13.5 (Java HotSpot(TM) Client VM, Java 1.8.0_281).
+Type in expressions for evaluation. Or try :help.
+
+scala> val name = "Igor' Kantimirov"
+val name: String = Igor' Kantimirov
+
+scala> val greetings = List("Hello","Hola","Guten tag")
+val greetings: List[String] = List(Hello, Hola, Guten tag)
+
+scala> 
+
+scala> def welcomeMessage(personName: String) = {
+     |   greetings.foreach(x=>println(s"$x Scala! This is $personName"))
+     | }
+def welcomeMessage(personName: String): Unit
+
+scala> 
+
+scala> welcomeMessage(name)
+Hello Scala! This is Igor' Kantimirov
+Hola Scala! This is Igor' Kantimirov
+Guten tag Scala! This is Igor' Kantimirov
+
+scala> welcomeMessage(name.reverse)
+Hello Scala! This is vorimitnaK 'rogI
+Hola Scala! This is vorimitnaK 'rogI
+Guten tag Scala! This is vorimitnaK 'rogI
+
+scala> 
