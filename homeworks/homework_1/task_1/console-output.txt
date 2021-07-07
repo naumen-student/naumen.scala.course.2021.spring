@@ -1,0 +1,41 @@
+Microsoft Windows [Version 10.0.19042.844]
+(c) Корпорация Майкрософт (Microsoft Corporation), 2020. Все права защищены.
+
+C:\Users\koksh>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 11.0.10).
+Type in expressions for evaluation. Or try :help.
+
+scala> val full_name = "Stepan Koksharov"
+full_name: String = Stepan Koksharov
+
+scala> val greeting_1 = "Hello"
+greeting_1: String = Hello
+
+scala> val greeting_2 = "Hola"
+greeting_2: String = Hola
+
+scala> val greeting_3 = "Guten tag"
+greeting_3: String = Guten tag
+
+scala> val middle = " Scala! This is "
+middle: String = " Scala! This is "
+
+scala> println(greeting_1 + middle + full_name)
+Hello Scala! This is Stepan Koksharov
+
+scala> println(greeting_2 + middle + full_name)
+Hola Scala! This is Stepan Koksharov
+
+scala> println(greeting_3 + middle + full_name)
+Guten tag Scala! This is Stepan Koksharov
+
+scala> println(greeting_1 + middle + full_name.reverse)
+Hello Scala! This is vorahskoK napetS
+
+scala> println(greeting_2 + middle + full_name.reverse)
+Hola Scala! This is vorahskoK napetS
+
+scala> println(greeting_3 + middle + full_name.reverse)
+Guten tag Scala! This is vorahskoK napetS
+
+scala>
