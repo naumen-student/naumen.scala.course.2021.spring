@@ -46,6 +46,33 @@
 
         <div class="slides">
             <section>
+                <h1>0. ФП и ООП</h1>
+            </section>
+            <section>
+                Каждое значение - это объект.
+                <div class="code-block">
+                    <pre>
+                        <span class="keyword">trait</span> RestClient {
+                            <span class="keyword">val</span> serviceHost: <span class="type">String</span>
+                        }
+
+                        <span class="keyword">class</span> RestClientImpl <span class="keyword">extends</span> RestClient {
+                            override <span class="keyword">val</span> serviceHost: <span class="type">String</span> = <span class="string">"192.168.1.1"</span>
+                        }
+                    </pre>                    
+                </div>
+                Каждая функция - это значение.
+                <div class="code-block">
+                    <pre>
+                        responseResult.map(result => <span class="keyword">println</span>(result))
+                        
+
+                        <span class="keyword">def</span> getResponse(sortFromString: String => ColumnSorting[sortType])
+                    </pre>
+                </div>
+            </section>
+
+            <section>
                 <h1>I. Выражения (expressions)</h1>
             </section>
             <section>
