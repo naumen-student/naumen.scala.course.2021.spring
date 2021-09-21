@@ -1,0 +1,39 @@
+marina@MacBook-Pro ~ % amm
+Loading...
+Welcome to the Ammonite Repl 2.3.8 (Scala 2.13.3 Java 15.0.1)
+@ def hello(name: String): Unit = {
+  println("Hello Scala! This is " + name)
+  } 
+defined function hello
+
+@ hello("Marina") 
+Hello Scala! This is Marina
+
+@ val greetings = Array("Hello", "Hola", "Guten tag") 
+greetings: Array[String] = Array("Hello", "Hola", "Guten tag")
+
+@ def hello_1(hello: String, name: String): Unit = {
+  println(hello + " Scala! This is " + name)
+  } 
+defined function hello_1
+
+@ for (greeting <- greetings) println(hello_1(greeting, "Marina")) 
+Hello Scala! This is Marina
+()
+Hola Scala! This is Marina
+()
+Guten tag Scala! This is Marina
+()
+
+
+@ val name = "Marina Konovalova" 
+name: String = "Marina Konovalova"
+
+@ for (greeting <- greetings) println(hello_1(greeting, name.reverse))  
+Hello Scala! This is avolavonoK aniraM
+()
+Hola Scala! This is avolavonoK aniraM
+()
+Guten tag Scala! This is avolavonoK aniraM
+()
+
