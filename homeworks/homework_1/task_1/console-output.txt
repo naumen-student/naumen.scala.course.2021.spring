@@ -1,0 +1,45 @@
+$ scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_271).
+Type in expressions for evaluation. Or try :help.
+
+scala> def greet(greeting: String, name: String): Unit = { println(s"$greeting Scala! This is $name") }
+greet: (greeting: String, name: String)Unit
+
+scala> var name = "BigBird"
+name: String = BigBird
+
+scala> var greeting = "Hello"
+greeting: String = Hello
+
+scala> greet(greeting, name)
+Hello Scala! This is BigBird
+
+scala> greeting = "Hola"
+greeting: String = Hola
+
+scala> greet(greeting, name)
+Hola Scala! This is BigBird
+
+scala> greeting = "Guten Tag"
+greeting: String = Guten Tag
+
+scala> greet(greeting, name)
+Guten Tag Scala! This is BigBird
+
+scala> name = name.reverse
+name: String = driBgiB
+
+scala> greet(greeting, name)
+Guten Tag Scala! This is driBgiB
+
+scala> greeting = "Hola"
+greeting: String = Hola
+
+scala> greet(greeting, name)
+Hola Scala! This is driBgiB
+
+scala> greeting = "Hello"
+greeting: String = Hello
+
+scala> greet(greeting, name)
+Hello Scala! This is driBgiB
