@@ -1,0 +1,29 @@
+C:\Users\Anna>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 15.0.1).
+Type in expressions for evaluation. Or try :help.
+
+scala> val text = "Hello, Scala! This is Anna Eleeva"
+text: String = Hello, Scala! This is Anna Eleeva
+
+scala> val name = "Anna Eleeva"
+name: String = Anna Eleeva
+
+scala> println(text)
+Hello, Scala! This is Anna Eleeva
+
+scala> println(name)
+Anna Eleeva
+
+scala> println(text.replace("Hello", "Hi"))
+Hi, Scala! This is Anna Eleeva
+
+scala> val name_reversed = name.reverse
+name_reversed: String = aveelE annA
+
+scala> println(text.replace(name, name_reversed))
+Hello, Scala! This is aveelE annA
+
+scala> println(text.replace(name, name_reversed).replace("Hello","Gutten Tag"))
+Gutten Tag, Scala! This is aveelE annA
+
+scala>
