@@ -1,0 +1,21 @@
+C:\Users\Toriv>scala
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 11.0.9).
+Type in expressions for evaluation. Or try :help.
+
+scala> val hello = "Hello Scala! This is Alexander Shuxtoff"
+hello: String = Hello Scala! This is Alexander Shuxtoff
+
+scala> print(hello)
+Hello Scala! This is Alexander Shuxtoff
+scala> print(hello.replace("Hello", "Hola"))
+Hola Scala! This is Alexander Shuxtoff
+scala> print(hello.replace("Hello", "Hi"))
+Hi Scala! This is Alexander Shuxtoff
+scala> val firstName = "Alexander"
+firstName: String = Alexander
+
+scala> val secondName = "Shuxtoff"
+secondName: String = Shuxtoff
+
+scala> print(hello.replace(firstName + " " + secondName, firstName.reverse + " " + secondName.reverse))
+Hello Scala! This is rednaxelA ffotxuhS
