@@ -1,0 +1,13 @@
+[debug] > Exec(__runWatch console0, Some(f7e9cf31-d6b9-4d31-b0b8-dc9ff09fc14c), Some(CommandSource(console0)))
+[debug] > Exec(sbtStashOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__preWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(run, None, Some(CommandSource(console0)))
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to E:\idea_projects\naumen_task1\target\scala-2.13\classes ...
+[info] done compiling
+[success] Total time: 0 s, completed 27 Feb 2021, 23:45:30
+[debug] > Exec(resumeFromFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(sbtPopOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__postWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(__waitWatch console0, None, Some(CommandSource(console0)))

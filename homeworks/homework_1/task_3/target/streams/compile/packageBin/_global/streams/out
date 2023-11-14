@@ -1,0 +1,23 @@
+[debug] Packaging E:\idea_projects\naumen_task1\target\scala-2.13\naumen_task1_2.13-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	ru
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru
+[debug] 	ru\anisimov_d
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d
+[debug] 	ru\anisimov_d\naumen
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d\naumen
+[debug] 	ru\anisimov_d\naumen\scala2021
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d\naumen\scala2021
+[debug] 	ru\anisimov_d\naumen\scala2021\task1
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d\naumen\scala2021\task1
+[debug] 	ru\anisimov_d\naumen\scala2021\task1\Main$.class
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d\naumen\scala2021\task1\Main$.class
+[debug] 	ru\anisimov_d\naumen\scala2021\task1\Main$delayedInit$body.class
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d\naumen\scala2021\task1\Main$delayedInit$body.class
+[debug] 	ru\anisimov_d\naumen\scala2021\task1\Main.class
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d\naumen\scala2021\task1\Main.class
+[debug] 	ru\anisimov_d\naumen\scala2021\task1\package$.class
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d\naumen\scala2021\task1\package$.class
+[debug] 	ru\anisimov_d\naumen\scala2021\task1\package.class
+[debug] 	  E:\idea_projects\naumen_task1\target\scala-2.13\classes\ru\anisimov_d\naumen\scala2021\task1\package.class
+[debug] Done packaging.
