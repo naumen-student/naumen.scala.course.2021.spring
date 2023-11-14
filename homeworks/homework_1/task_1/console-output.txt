@@ -1,0 +1,25 @@
+lesch@MacBook-Air-Aleksej ~ % amm
+Loading...
+Welcome to the Ammonite Repl 2.3.8 (Scala 2.13.3 Java 15.0.2)
+@ val name = "Aleksey" 
+name: String = "Aleksey"
+
+@ println("Hello Scala! This is " + name)  
+Hello Scala! This is Aleksey
+
+
+@ val greeting = List("Hello","Hola","Guten tag")  
+greeting: List[String] = List("Hello", "Hola", "Guten tag")
+
+@ greeting.foreach(a => println(a + " Scala! This is " + name)) 
+Hello Scala! This is Aleksey
+Hola Scala! This is Aleksey
+Guten tag Scala! This is Aleksey
+
+
+@ greeting.foreach(a => println(a + " Scala! This is " + name.reverse)) 
+Hello Scala! This is yeskelA
+Hola Scala! This is yeskelA
+Guten tag Scala! This is yeskelA
+
+
