@@ -1,0 +1,27 @@
+C:\Users\anisa>scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 11.0.10).
+Type in expressions for evaluation. Or try :help.
+
+scala> def printHello(helloWord: String, name: String) : Unit = {
+     | println(s"$helloWord Scala! This is $name")
+     | }
+printHello: (helloWord: String, name: String)Unit
+
+scala> val helloWords = List("Hello", "Hi", "Bonjour")
+helloWords: List[String] = List(Hello, Hi, Bonjour)
+
+scala> val myName = "Anisa"
+myName: String = Anisa
+
+scala> val names = List(myName, myName.reverse)
+names: List[String] = List(Anisa, asinA)
+
+scala> for (name <- names)
+     | for (helloWord <- helloWords)
+     | printHello(helloWord, name)
+Hello Scala! This is Anisa
+Hi Scala! This is Anisa
+Bonjour Scala! This is Anisa
+Hello Scala! This is asinA
+Hi Scala! This is asinA
+Bonjour Scala! This is asinA

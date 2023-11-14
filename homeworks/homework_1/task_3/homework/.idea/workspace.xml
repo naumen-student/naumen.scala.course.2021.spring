@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96c8818c-2884-486f-970c-63309e5e42ec" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Worksheet" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1pHp91ogb9vVDMXEnHNNFiL1WKd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Run the program" type="SbtRunConfiguration" factoryName="sbt Task" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="tasks" value="~run" />
+      <option name="useSbtShell" value="false" />
+      <option name="vmparams" value="" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="homework" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="homework [file:/C:/Users/anisa/IdeaProjects/homework/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="homework-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3229699429468" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="2994936724" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="2513440544" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96c8818c-2884-486f-970c-63309e5e42ec" name="Default Changelist" comment="" />
+      <created>1614849714654</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614849714654</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614853491549">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1614853491549" />
+    <state x="406" y="73" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1614851615122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="406" y="73" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.768@0.0.1366.768" timestamp="1614851615122" />
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1614853018005">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614853018005" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1614853018005">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614853018005" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1614853018004">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614853018004" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1614853018005">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614853018005" />
+    <state x="184" y="26" key="SettingsEditor" timestamp="1614849843447">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="26" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1614849843447" />
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1614853273653">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1614853273653" />
+  </component>
+</project>
