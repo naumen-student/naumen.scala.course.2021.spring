@@ -1,0 +1,47 @@
+C:\Users\Artouria Pendragon>scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 14.0.1).
+Type in expressions for evaluation. Or try :help.
+
+scala> def greet(greeting: String, name: String): Unit = {
+     | println(greeting + ", Scala! This is " + name)
+     | }
+greet: (greeting: String, name: String)Unit
+
+scala> val name = "Kirill Turyshev"
+name: String = Kirill Turyshev
+
+scala> val greeting = "Hello"
+greeting: String = Hello
+
+scala> greet(greeting, name)
+Hello, Scala! This is Kirill Turyshev
+
+scala> val greeting = "Hola"
+greeting: String = Hola
+
+scala> greet(greeting, name)
+Hola, Scala! This is Kirill Turyshev
+
+scala> val greeting = "Guten tag"
+greeting: String = Guten tag
+
+scala> greet(greeting, name)
+Guten tag, Scala! This is Kirill Turyshev
+
+scala> val greeting = "Hello"
+greeting: String = Hello
+
+scala> greet(greeting, name.reverse)
+Hello, Scala! This is vehsyruT lliriK
+
+scala> val greeting = "Hola"
+greeting: String = Hola
+
+scala> greet(greeting, name.reverse)
+Hola, Scala! This is vehsyruT lliriK
+
+scala> val greeting = "Guten tag"
+greeting: String = Guten tag
+
+scala> greet(greeting, name.reverse)
+Guten tag, Scala! This is vehsyruT lliriK
